@@ -13,10 +13,10 @@ pixels = neopixel.NeoPixel(
     pixel_pin, num_pixels, brightness=0.2, auto_write=False, pixel_order=ORDER
 )
 
-def setlight(r,g,b):
+def setlight(colourin):
     pixels.fill((0,0,0))
     pixels.show()
-    pixels.fill((r,g,b))
+    pixels.fill(colourin)
     pixels.show()
 
 
@@ -34,10 +34,7 @@ def index():
         setlight(hex_to_rgb(colour))
     return render_template('index.html')
 
-@app.route('/submit-colour',methods=['POST'])
-def submit_colour():
-    colour = request.form['colour_in']
-    return colour
+
 
 if __name__ == '__main__':
     app.run(debug=True,host='0.0.0.0')
