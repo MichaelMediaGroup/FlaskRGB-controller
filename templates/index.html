@@ -2,17 +2,64 @@
 <html lang="en">
 
 <head>
-    <title>Colour selector for LEDS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colour Selector for LEDs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input[type="color"] {
+            border: none;
+            height: 50px;
+            width: 100px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            margin: 10px 0;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Colour selector for LEDS</h1>
-    <form action"/submit-colour" method="POST">
-        <input type="color" name="colour_in">
-        <input type="submit" value="Submit">
-    </form>
-
-
+    <div class="container">
+        <h1>Colour Selector for LEDs</h1>
+        <form action="/submit-colour" method="POST">
+            <input type="color" name="colour_in">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
 </body>
-
 
 </html>
