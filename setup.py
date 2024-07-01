@@ -11,7 +11,7 @@ class CustomInstallCommand(install):
         Description=Flask Application
         After=network.target
         [Service]
-        User=pi
+        User=root
         WorkingDirectory=/home/pi/FlaskRGB-controller
         ExecStart=/usr/bin/python3 /home/pi/FlaskRGB-controller/app.py
         Restart=always
